@@ -13,6 +13,44 @@ main {
   color: rgba(0, 0, 0, 0.84);
 }
 
+header > img {
+  margin: 10px 0;
+}
+
+header > img,
+header > nav {
+  padding: 0 38px;
+}
+
+header > nav {
+  border-width: 1px 0;
+  border-style: solid;
+  background-color: rgb(250, 249, 248);
+}
+
+header > nav ul {
+  display: flex;
+  margin: 20px 0;
+  padding: 0;
+  gap: 30px;
+  list-style: none;
+}
+
+header > nav a {
+  color: #333333;
+  font-size: 24px;
+  line-height: 36px;
+  text-decoration: none;
+}
+
+header > nav a.checked {
+  color: rgb(203, 0, 0);
+}
+
+header > nav a:hover {
+  text-decoration: underline;
+}
+
 a,
 h1,
 h2 {
@@ -32,6 +70,11 @@ code {
 
 main {
   padding: 32px 0 52px;
+}
+
+header > nav a {
+  font-size: 24px;
+  line-height: 36px;
 }
 
 h1 {
@@ -59,7 +102,54 @@ main img {
 }
 
 @media (max-width: 800px) {
-/* Тут пиши стили для мобилки.
+  /* Тут пиши стили для мобилки.
     Стили применятся только когда страничка будет ≤800px шириной
  */
+
+ header > nav > ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header > img,
+  header > nav,
+  main > section {
+    padding: 0 20px;
+  }
+
+  main {
+    max-width: unset;
+  }
+
+  main {
+    padding-top: 20px;
+  }
+
+  header > nav a {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  h1 {
+    margin: 0 0 20px;
+    font-size: 26px;
+    line-height: 28px;
+  }
+
+  h2 {
+    margin: 0 0 6px;
+    font-size: 22px;
+    line-height: 39px;
+  }
+
+  p,
+  code {
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  main img {
+    margin: 0 0 24px;
+  }
 }
